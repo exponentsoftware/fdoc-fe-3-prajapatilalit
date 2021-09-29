@@ -1,10 +1,10 @@
 import React, { Component } from "react";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
-import Home from "./components/Home/Home";
+// import Home from "./components/Home/Home";
 import AddAlbum from "./components/Albums/AddAlbum";
 import Albums from "./components/Albums/Albums";
 import albumList from "./components/Albums/AlbumData";
-import Navbar from "./components/Navbar/Navbar";
+import Navbar from "./components/Navbar";
 
 class App extends Component {
   state = {
@@ -42,9 +42,9 @@ class App extends Component {
             removeAlbum={this.removeAlbum}
           />
           <Switch>
-            <Route exact path="/">
+            {/* <Route exact path="/">
               <Home />
-            </Route>
+            </Route> */}
             <Route exact path="/addalbum">
               <div className="container">
                 <div className="header">
