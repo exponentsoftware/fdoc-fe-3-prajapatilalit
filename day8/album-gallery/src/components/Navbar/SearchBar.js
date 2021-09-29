@@ -25,15 +25,14 @@ class SearchBar extends Component {
             onChange={this.inputSearchHandle}
             value={this.state.searchText}
           />
-          <button
-            type="submit"
+
+          <i
             onClick={() => this.props.search(this.state.searchText)}
-          >
-            <i className="fa fa-search"></i>
-          </button>
+            className="fa fa-search"
+          ></i>
         </form>
         <div className="album_item">
-          {this.props.searchItem === "" ? (
+          {this.props.searchItem.length === 0 ? (
             ""
           ) : (
             <div className="album">
@@ -47,14 +46,6 @@ class SearchBar extends Component {
                 <span className="album_artist">
                   {this.props.searchItem.artist}
                 </span>
-                {/* <button
-                  className="btn mt"
-                  onClick={() =>
-                    this.props.searchItem.removeItem(this.props.searchItem.id)
-                  }
-                >
-                  Delete
-                </button> */}
               </div>
             </div>
           )}

@@ -16,7 +16,7 @@ const Navbar = (props) => {
           </Link>
           <SearchBar
             search={props.onSearch}
-            searchItem={props.searchList}
+            searchItem={props.searchLists}
             removeItem={props.removeAlbum}
           />
 

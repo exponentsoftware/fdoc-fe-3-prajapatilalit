@@ -9,7 +9,7 @@ import Navbar from "./components/Navbar";
 class App extends Component {
   state = {
     albums: albumList,
-    searchList: "",
+    searchList: [],
   };
 
   addAlbum = (albumItem) => {
@@ -38,7 +38,7 @@ class App extends Component {
         <BrowserRouter>
           <Navbar
             onSearch={this.searchAlbum}
-            searchList={this.state.searchList}
+            searchLists={this.state.searchList}
             removeAlbum={this.removeAlbum}
           />
           <Switch>
